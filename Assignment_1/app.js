@@ -33,5 +33,5 @@ alert(message);
 document.write("Yah! I Can Write HTML Content Through JavaScript");
 
 
-alert("▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬");
+alert("▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬"); 
 
