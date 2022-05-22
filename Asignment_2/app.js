@@ -40,7 +40,7 @@ document.write("Initial value "+ temp);
 var newtemp=temp+ ++temp
 document.write("value after increment is "+temp);
 document.write("Value after "+newtemp);
-document.write("value after decreament is "--newtemp);
+document.write("value after decreament is "+ --newtemp);
 
 document.write("The remaider is : 0")
 
