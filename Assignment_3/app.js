@@ -3,20 +3,20 @@
 var num = +prompt("Enter any number");
 
 
-document.write("Result :\n The value of a  is "+num +"\n") ;
+document.write("Result :<br> The value of a  is "+num +"<br>") ;
 
 document.write("------------------------------------") ;
-document.write("The value of ++a  is "+(++num) +"\n") ;
-document.write("Now the value of a  is "+(num) +"\n") ;
+document.write("The value of ++a  is "+(++num) +"<br>") ;
+document.write("Now the value of a  is "+(num) +"<br>") ;
 
-document.write("The value of a++  is "+(num++) +"\n") ;
-document.write("Now the value of a  is "+(num) +"\n") ;
+document.write("The value of a++  is "+(num++) +"<br>") ;
+document.write("Now the value of a  is "+(num) +"<br>") ;
 
-document.write("The value of --a  is "+(--num) +"\n") ;
-document.write("Now the value of a  is "+(num) +"\n") ;
+document.write("The value of --a  is "+(--num) +"<br>") ;
+document.write("Now the value of a  is "+(num) +"<br>") ;
 
-document.write("The value of a--  is "+(num--) +"\n") ;
-document.write("Now the value of a  is "+(num) +"\n") ;
+document.write("The value of a--  is "+(num--) +"<br>") ;
+document.write("Now the value of a  is "+(num) +"<br>") ;
 
 
 var a = 2, b = 1;
