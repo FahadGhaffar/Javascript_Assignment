@@ -37,3 +37,21 @@ function is_leap(year) {
 }
 
 document.write(is_leap(2012) + "<br>");
+
+
+function area_of_trangle(a, b, c) {
+
+
+    var s = (a + b + c) / 2;
+    var a = s - a;
+    var b = s - b;
+    var c = s - c;
+    area = s(a * b * c)
+
+
+    return area;
+
+
+}
+
+document.write(area_of_trangle(2, 2, 2) + "<br>");
