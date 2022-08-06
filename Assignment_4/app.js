@@ -46,10 +46,31 @@ var check_vowel = "e";
 
 if (check_number === "a" && check_number === "e" && check_number === "i" && check_number === "o" && check_number === "u") {
 
-    document.write(" Number is Vowel  <br/>");
+    document.write(" Letter is Vowel  <br/>");
 
+} else {
+
+    document.write(" Letter not is Vowel  <br/>");
 }
 
+var check_password = "Asd"
+var password = prompt("Enter your Password")
+if (check_number === password) {
+
+    document.write(" Correct!  <br/>");
+} else {
+    document.write(" Wrong  <br/>");
+}
+
+
+
+var hour = 13;
+if (hour < 18) {
+    greeting = "Good day";
+}
+else {
+    greeting = "Good evening";
+}
 
 
 
