@@ -54,4 +54,3 @@ function area_of_trangle(a, b, c) {
 
 }
 
-document.write(area_of_trangle(2, 2, 2) + "<br>");
