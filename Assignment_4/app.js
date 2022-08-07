@@ -73,4 +73,29 @@ else {
 }
 
 
+var city = prompt("Enter city name: ");
 
+if (city.toLowerCase() === "karachi") {
+
+
+    document.write(" Welcom to Karachi  <br/>");
+} else {
+
+    document.write(" You are not live in karachi  <br/>");
+}
+
+
+
+var fuel = +prompt("Enter your fuel");
+
+
+if (fuel <= 0.25) {
+
+
+    document.write(" Please refill the fuel   <br/>");
+}
+
+var a = 4;
+if (++a === 5) {
+    alert("given condition for variable a is true");
+}
