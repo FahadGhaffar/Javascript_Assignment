@@ -1,13 +1,22 @@
-/* .main {
-  position: relative;
+body {
+  background-image: url(background.gif);
+  background-size: cover;
 }
 
-.btn {
+.one {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
   position: absolute;
-  top: 5px;
-  right: 5px;
-} */
+  bottom: 30px;
+  left: 350px;
+}
 
-.main {
-  text-align: center;
+.two {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  position: absolute;
+  bottom: 30px;
+  right: 350px;
 }
