@@ -1,6 +1,9 @@
 body {
   background-image: url(background.gif);
-  background-size: cover;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: top;
 }
 
 .one {
