@@ -12,7 +12,20 @@
     
 
     <div class="card">
+
+            <video  class="videos" id="autoplay"  loop autoplay muted control >
+                <source src="Assets/videos.mp4" type="Video/mp4">
+            </video>       
             <div  class="trafic_signal">
+                <div onmouseover="redlightover()" id="redlight"  onmouseout="lightout()" class="red_light circle">
+
+                </div>
+                     <div onmouseover="yellowlightover()" id="yellowlight" onmouseout="lightout()" class="yellow_light circle">
+
+                </div>
+                     <div onmouseover="greenlightover()" id="greenlight" onmouseout="lightout()" class="green_light circle">
+
+                </div>
 
 
             </div>
