@@ -1,4 +1,16 @@
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+var setitems = document.getElementById("listdata");
+var getdata = document.getElementById("getdata");
+function appendlist() {
+    setitems.innerHTML += `<li> 
+    ${getdata.value} 
+    <button >Edit</button>
+    <button >Delete</button>
+=======
+>>>>>>> Stashed changes
 var getdata=document.getElementById("getdata");
 var setitems=document.getElementById("listdata");
 var arr=[]
@@ -10,6 +22,10 @@ function appendList() {
     <span >${getdata.value} </span> 
     <button onclick="editItem(event)" >EDIT</button>
     <button onclick="deleteItem(event)" >DELETE</button>
+<<<<<<< Updated upstream
+=======
+>>>>>>> 528747f24debcfd8563fa6c726f9cc1a264bf94d
+>>>>>>> Stashed changes
      
     </li> `}
 
