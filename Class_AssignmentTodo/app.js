@@ -1,12 +1,42 @@
 
-var setitems=document.getElementById("listdata");
 var getdata=document.getElementById("getdata");
-function appendlist() {
+var setitems=document.getElementById("listdata");
+var arr=[]
+function appendList() {
+    
+    if(getdata.value !== ""){
+    arr.push(getdata.value)       
     setitems.innerHTML+=`<li> 
     ${getdata.value} 
-    <button >Edit</button>
+    <button onclick="editItem()" >EDIT</button>
+    <button onclick="deleteItem(getdata.value)" >DELETE</button>
      
-    </li> `
+    </li> `}
+
+    console.log(arr)
+}
+
+
+function deleteList(){
+
+    setitems.innerHTML = ""
+ 
+
+}
+
+function editItem(){
+   
+
+
+
+}
+
+function deleteItem(a){
+ 
+
+    console.log(a);
+
+
 }
 
 // const person = {
