@@ -7,13 +7,13 @@ function appendList() {
     if(getdata.value !== ""){
     arr.push(getdata.value)       
     setitems.innerHTML+=`<li> 
-    ${getdata.value} 
-    <button onclick="editItem()" >EDIT</button>
-    <button onclick="deleteItem(getdata.value)" >DELETE</button>
+    <span >${getdata.value} </span> 
+    <button onclick="editItem(event)" >EDIT</button>
+    <button onclick="deleteItem(event)" >DELETE</button>
      
     </li> `}
 
-    console.log(arr)
+    // console.log(arr)
 }
 
 
@@ -24,17 +24,20 @@ function deleteList(){
 
 }
 
-function editItem(){
+function editItem(event){
    
+    var edit=prompt("Update element");
 
+   event.target.previousElementSibling.innerText= edit
 
 
 }
 
-function deleteItem(a){
+function deleteItem(event){
  
 
-    console.log(a);
+    // console.log(event.target.parentNode.remove());
+    event.target.parentNode.remove();
 
 
 }
