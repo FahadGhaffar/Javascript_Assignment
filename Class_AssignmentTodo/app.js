@@ -2,45 +2,101 @@
 var getdata=document.getElementById("getdata");
 var setitems=document.getElementById("listdata");
 var arr=[]
-function appendList() {
-    
-    if(getdata.value !== ""){
-    arr.push(getdata.value)       
-    setitems.innerHTML+=`<li> 
-    <span >${getdata.value} </span> 
-    <button onclick="editItem(event)" >EDIT</button>
-    <button onclick="deleteItem(event)" >DELETE</button>
-     
-    </li> `}
-
-     console.log(arr)
-}
 
 
-function deleteList(){
-
-    setitems.innerHTML = ""
- 
-
-}
-
-function editItem(event){
+function loadData(){
    
-    var edit=prompt("Update element");
+    setitems.innerHTML ="";
+    for (let i = 0; i < arr.length; i++) {
+       
+            setitems.innerHTML+=`<li> 
+    <span >${arr[i]} </span> 
+    <button onclick="editItem(${i})" >EDIT</button>
+    <button onclick="deleteItem(${i})" >DELETE</button>
+     
+    </li> 
+        
+        `
 
-   event.target.previousElementSibling.innerText= edit
+        
+    }
+
+
 
 
 }
 
-function deleteItem(event){
+loadData();
+
+function appendList() {
+
+  arr.push(getdata.value);
+  loadData();
+
+}
+
+function editItem(i){
+    
+
+
+    var edit=prompt("Update element");
+    arr.splice(i,1,edit);
+    loadData();
+    // console.log(i);
+
+
+}
+
+
+function deleteItem(i){
+
+
+    arr.splice(i,1);
+    loadData();
+}
+
+
+
+
+// function appendList() {
+    
+//     if(getdata.value !== ""){
+//     arr.push(getdata.value)       
+//     setitems.innerHTML+=`<li> 
+//     <span >${getdata.value} </span> 
+//     <button onclick="editItem(event)" >EDIT</button>
+//     <button onclick="deleteItem(event)" >DELETE</button>
+     
+//     </li> `}
+
+//      console.log(arr)
+// }
+
+
+// function deleteList(){
+
+//     setitems.innerHTML = ""
  
 
-    // console.log(event.target.parentNode.remove());
-    event.target.parentNode.remove();
+// }
+
+// function editItem(event){
+   
+//     var edit=prompt("Update element");
+
+//    event.target.previousElementSibling.innerText= edit
 
 
-}
+// }
+
+// function deleteItem(event){
+ 
+
+//     // console.log(event.target.parentNode.remove());
+//     event.target.parentNode.remove();
+
+
+// }
 
 // const person = {
 //     name: 'Wes',
