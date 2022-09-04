@@ -104,3 +104,23 @@ img{
 
 
 
+.form_alignment {
+    /* margin: 0 auto; */
+    padding: 3% 15% 0 15%;
+}
+
+.form_input_height{
+
+    height: 52px;
+}
+
+.form_input_height:focus{
+outline: none;
+    border-color: #8fc44a;
+    box-shadow: 0 0 10px #8fc44a;
+    height: 52px;
+}
+label{
+
+    color: #116fb3 ;
+}
