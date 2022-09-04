@@ -1,0 +1,52 @@
+.form-hero::before{
+    background-image: url(https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8);
+
+    background-repeat: no-repeat;
+    content: "";
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    opacity: .2;
+    position: absolute;
+
+
+}
+
+.form-hero{
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+          width: 100%;
+    height: 50vh;
+}
+
+.logo{
+
+    width: 250px;
+}
+
+img{
+
+
+    vertical-align: middle;
+}
+
+.form_main_h1{
+
+
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.form_sub_heading{
+
+    color: gray;
+    font-size: 20px;
+}
+
+
+
