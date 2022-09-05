@@ -124,3 +124,6 @@ label{
 
     color: #116fb3 ;
 }
+select {
+	appearance: none;
+}

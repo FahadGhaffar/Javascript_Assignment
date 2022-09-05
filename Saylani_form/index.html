@@ -35,16 +35,52 @@
     <form>
 
   <div class="form-row">
+
+<div class="col-md-6 mb-2">
+
+
+      <label for="SelectCity">City</label>
+      <!-- <input type="text" class="form-control is-invalid form_input_height" id="SelectCity" placeholder="City" required> -->
+      <Select  type="dropdown" id="SelectCity" onblur=check_field_valid() onfocus=set_on_focus()  class="form-control is-invalid form_input_height " required>
+        <option value="">Select Options</option>
+        <option value="karachi">Karachi</option>
+
+      </Select>
+      <div class="invalid-feedback">
+        Please provide a valid course.
+      </div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+<div class="col-md-6 mb-2">
+      <label for="SelectCourse">Course</label>
+      <!-- <input type="text" class="form-control is-invalid form_input_height" id="SelectCity" placeholder="City" required> -->
+      <Select  type="dropdown" id="SelectCourse" onblur=check_field_valid()  onfocus=set_on_focus()  class="form-control is-invalid form_input_height " required>
+        <option value="">Select Options</option>
+        <option value="karachi">HTML</option>
+
+      </Select>
+      <div class="invalid-feedback">
+        Please provide a valid course.
+      </div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+
+
+
     <div class="col-md-6 mb-2">
       <label for="validationServer01 " class="form_lable">First name</label>
-      <input type="text" class="form-control form_input_height " onblur=check_field_valid()  id="validationServer01" placeholder="First name" value="Mark" required>
+      <input type="text" class="form-control form_input_height " onblur=check_field_valid() onfocus=set_on_focus() id="validationServer01" placeholder="First name" value="Mark" required>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-6 mb-2">
       <label for="validationServer02">Last name</label>
-      <input type="text" class="form-control is-valid form_input_height" id="validationServer02" placeholder="Last name" value="Otto" required>
+      <input type="text" class="form-control  form_input_height" id="validationServer02" placeholder="Last name" value="Otto" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -55,13 +91,23 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
         </div>
-        <input type="text" class="form-control is-invalid form_input_height" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3" required>
+        <input type="text" class="form-control is-invalid form_input_height"  onblur=check_field_valid() id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3" required>
+        <div class="valid-feedback">
+        Looks good!
+      </div>
         <div class="invalid-feedback">
           Please choose a username.
         </div>
       </div>
     </div>
+
+
+
+
+
   </div>
+
+
   <div class="form-row">
     <div class="col-md-6 mb-2">
       <label for="validationServer03">City</label>

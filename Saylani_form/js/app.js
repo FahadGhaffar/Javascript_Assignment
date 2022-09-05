@@ -13,3 +13,13 @@ function check_field_valid() {
         e.classList.add('is-valid');
     }
 }
+
+
+function set_on_focus() {
+
+    var e = event.target;
+    e.classList.remove('is-valid');
+    e.classList.remove('is-invalid');
+
+
+}
