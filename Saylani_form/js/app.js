@@ -1,3 +1,19 @@
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+var SelectCity = document.getElementById("SelectCity");
+
+
+
 
 
 function check_field_valid(x) {
