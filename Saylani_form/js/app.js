@@ -5,15 +5,22 @@ function check_field_valid(x) {
 
     var e = event.target;
     if (e.value === "") {
+        e.classList.remove('is-regex');
         e.classList.remove('is-valid');
         e.classList.add('is-invalid');
 
     } else {
         e.classList.remove('is-invalid');
         e.classList.add('is-valid');
+        e.classList.remove('is-regex');
     }
+    console.log(e.value);
+    if (!/(.*[a-z]){3}/i.test(e.value)) {
+        e.classList.remove('is-invalid');
+        e.classList.remove('is-valid');
+        e.classList.add("is-regex");
 
-    console.log(x);
+    }
 }
 
 

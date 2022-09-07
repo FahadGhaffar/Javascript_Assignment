@@ -41,7 +41,7 @@
 
       <label for="SelectCity">Select city</label>
       <!-- <input type="text" class="form-control is-invalid form_input_height" id="SelectCity" placeholder="City" required> -->
-      <Select  type="dropdown" id="SelectCity" onblur=check_field_valid() onfocus=set_on_focus()  class="form-control form_input_height " required>
+      <Select  type="dropdown" id="SelectCity" onblur=check_field_valid(id) onfocus=set_on_focus()  class="form-control form_input_height " required>
         <option value="">Select Options</option>
         <option value="karachi">Karachi</option>
 
@@ -56,7 +56,7 @@
 <div class="col-md-6 mb-2">
       <label for="SelectCourse">Select course</label>
       <!-- <input type="text" class="form-control is-invalid form_input_height" id="SelectCity" placeholder="City" required> -->
-      <Select  type="dropdown" id="SelectCourse" onblur=check_field_valid()  onfocus=set_on_focus()  class="form-control form_input_height " required>
+      <Select  type="dropdown" id="SelectCourse" onblur=check_field_valid(id)  onfocus=set_on_focus()  class="form-control form_input_height " required>
         <option value="">Select Options</option>
         <option value="html">HTML</option>
 
@@ -73,8 +73,12 @@
 
     <div class="col-md-6 mb-2">
       <label for="fullName " class="form_lable">Full name</label>
-      <input type="text" class="form-control form_input_height " onblur=check_field_valid(id) onfocus=set_on_focus() id="fullName" placeholder="Full name"  required>
-     <div class="invalid-feedback">
+      <input type="text" class="form-control  form_input_height " onblur=check_field_valid(id) onfocus=set_on_focus() id="fullName" placeholder="Full name"  required>
+      <div class="form_general ">
+        Please write 3 letter in this field
+      </div>
+    
+      <div class="invalid-feedback">
         Please provide a valid Full name.
       </div>
       <div class="valid-feedback">
@@ -83,7 +87,10 @@
     </div>
     <div class="col-md-6 mb-2">
       <label for="fatherName">Father name</label>
-      <input type="text" class="form-control  form_input_height" id="fatherName" onblur=check_field_valid() onfocus=set_on_focus() placeholder="Father name"  required>
+      <input type="text" class="form-control  form_input_height" id="fatherName" onblur=check_field_valid(id) onfocus=set_on_focus() placeholder="Father name"  required>
+      <div class="form_general ">
+        Please write 3 letter in this field
+      </div>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -109,7 +116,10 @@
 
         <div class="col-md-6 mb-2">
       <label for="emailAddress">Email address</label>
-      <input type="email" class="form-control  form_input_height" id="emailAddress" onblur=check_field_valid() onfocus=set_on_focus() placeholder="Email Address"  required>
+      <input type="email" class="form-control  form_input_height" id="emailAddress" onblur=check_field_valid(id) onfocus=set_on_focus() placeholder="Email Address"  required>
+            <div class="form_general ">
+        Please write CNIC in this format example@domain.com in this field
+      </div>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -121,7 +131,10 @@
 
        <div class="col-md-6 mb-2">
       <label for="phoneNumer">Phone number</label>
-      <input type="number" class="form-control  form_input_height" id="phoneNumer" onblur=check_field_valid() onfocus=set_on_focus() placeholder="Phone Number"  required>
+      <input type="number" class="form-control  form_input_height" id="phoneNumer" onblur=check_field_valid(id) onfocus=set_on_focus() placeholder="Phone Number"  required>
+               <div class="form_general ">
+        Please write Phone number in this format 0000-0000000 in this field
+      </div>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -132,7 +145,10 @@
 
            <div class="col-md-6 mb-2">
       <label for="cinc">CNIC</label>
-      <input type="number" class="form-control  form_input_height" id="cinc" onblur=check_field_valid() onfocus=set_on_focus() placeholder="CNIC"  required>
+      <input type="number" class="form-control  form_input_height" id="cinc" onblur=check_field_valid(id) onfocus=set_on_focus() placeholder="CNIC"  required>
+      <div class="form_general ">
+        Please write CNIC in this format 00000-0000000-0 in this field
+      </div>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -144,7 +160,10 @@
  
                <div class="col-md-6 mb-2">
       <label for="fatherCnic">Father's CNIC (optional)</label>
-      <input type="number" class="form-control  form_input_height" id="fatherCnic" onblur=check_field_valid() onfocus=set_on_focus() placeholder="Father's CNIC (optional)" >
+      <input type="number" class="form-control  form_input_height" id="fatherCnic" onblur=check_field_valid(id) onfocus=set_on_focus() placeholder="Father's CNIC (optional)" >
+            <div class="form_general ">
+        Please write CNIC in this format 00000-0000000-0 in this field
+      </div>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -155,7 +174,7 @@
 
                    <div class="col-md-6 mb-2">
       <label for="dateOfBirth">Date of birth</label>
-      <input type="date" class="form-control  form_input_height" id="dateOfBirth" onblur=check_field_valid() onfocus=set_on_focus()   required>
+      <input type="date" class="form-control  form_input_height" id="dateOfBirth" onblur=check_field_valid(id) onfocus=set_on_focus()   required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -172,7 +191,7 @@
 
       <label for="selectGender">Select gender</label>
       <!-- <input type="text" class="form-control is-invalid form_input_height" id="SelectCity" placeholder="City" required> -->
-      <Select  type="dropdown" id="selectGender" onblur=check_field_valid() onfocus=set_on_focus()  class="form-control form_input_height " required>
+      <Select  type="dropdown" id="selectGender" onblur=check_field_valid(id) onfocus=set_on_focus()  class="form-control form_input_height " required>
         <option value="">Select Options</option>
         <option value="male">Male</option>
 
@@ -187,8 +206,11 @@
 
         <div class="col-md-12 mb-2">
       <label for="address " class="form_lable">Address</label>
-      <input type="text" class="form-control form_input_height " onblur=check_field_valid() onfocus=set_on_focus() id="address" placeholder="Address"  required>
-     <div class="invalid-feedback">
+      <input type="text" class="form-control form_input_height " onblur=check_field_valid(id) onfocus=set_on_focus() id="address" placeholder="Address"  required>
+           <div class="form_general ">
+        Please write 3 letter in this field
+      </div>
+      <div class="invalid-feedback">
         Please provide a valid Address.
       </div>
       <div class="valid-feedback">
@@ -199,8 +221,11 @@
 
        <div class="col-md-12 mb-2">
       <label for="lastQualification " class="form_lable">Last qualification</label>
-      <input type="text" class="form-control form_input_height " onblur=check_field_valid() onfocus=set_on_focus() id="lastQualification" placeholder="Last Qualification"  required>
-     <div class="invalid-feedback">
+      <input type="text" class="form-control form_input_height " onblur=check_field_valid(id) onfocus=set_on_focus() id="lastQualification" placeholder="Last Qualification"  required>
+           <div class="form_general ">
+        Please write 3 letter in this field
+      </div>
+      <div class="invalid-feedback">
         Please provide a valid qualification.
       </div>
       <div class="valid-feedback">
@@ -210,7 +235,7 @@
 
            <div class="col-md-6 mb-2">
             <label for="formFileMultiple" class="form-label">Upload Image</label>
-  <input class="form-control upload_image" accept="image/png, image/jpeg, image/jpg" onblur=check_field_valid() onfocus=set_on_focus() type="file" id="formFileMultiple" multiple required>
+  <input class="form-control upload_image" accept="image/png, image/jpeg, image/jpg" onblur=check_field_valid(id) onfocus=set_on_focus() type="file" id="formFileMultiple" multiple required>
 
      <div class="invalid-feedback">
         Please provide a valid Image.
