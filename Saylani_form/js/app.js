@@ -49,6 +49,11 @@ function check_field_valid(x) {
         e.classList.add("is-invalid");
 
     }
+
+    if (e.id === "emailAddress" && !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e.value)) {
+        e.classList.remove('is-valid');
+        e.classList.add("is-invalid");
+    }
 }
 
 
@@ -67,7 +72,7 @@ function formSubmit() {
 
 
     event.preventDefault();
+    swal("Good job!", "You clicked the button!", "success");
 
 
 }
-swal("Hello world!");
