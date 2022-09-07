@@ -20,13 +20,18 @@ function check_field_valid(x) {
 
         e.classList.remove('is-valid');
         e.classList.add("is-invalid");
-        alert("fullName");
+
 
     }
-    if (e.id === "cinc" && /^[0-9]{5}-[0-9]{7}-[0-9]$/.test(e.value)) {
+    if ((e.id === "cinc" || e.id === "fatherCnic") && !/^[0-9]{5}-[0-9]{7}-[0-9]$/.test(e.value)) {
         e.classList.remove('is-valid');
         e.classList.add("is-invalid");
-        alert("cinc");
+
+    }
+    if (e.id === "phoneNumer" && !/^[0-9]{4}-[0-9]{7}$/.test(e.value)) {
+        e.classList.remove('is-valid');
+        e.classList.add("is-invalid");
+
     }
 }
 
@@ -49,3 +54,4 @@ function formSubmit() {
 
 
 }
+swal("Hello world!");
