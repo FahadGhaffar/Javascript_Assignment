@@ -5,21 +5,28 @@ function check_field_valid(x) {
 
     var e = event.target;
     if (e.value === "") {
-        e.classList.remove('is-regex');
+
         e.classList.remove('is-valid');
         e.classList.add('is-invalid');
+
 
     } else {
         e.classList.remove('is-invalid');
         e.classList.add('is-valid');
-        e.classList.remove('is-regex');
+
     }
     console.log(e.value);
-    if (!/(.*[a-z]){3}/i.test(e.value)) {
-        e.classList.remove('is-invalid');
-        e.classList.remove('is-valid');
-        e.classList.add("is-regex");
+    if ((e.id === "fullName" || e.id === "fatherName" || e.id === "address" || e.id === "lastQualification") && !/(.*[a-z]){3}/i.test(e.value)) {
 
+        e.classList.remove('is-valid');
+        e.classList.add("is-invalid");
+        alert("fullName");
+
+    }
+    if (e.id === "cinc" && /^[0-9]{5}-[0-9]{7}-[0-9]$/.test(e.value)) {
+        e.classList.remove('is-valid');
+        e.classList.add("is-invalid");
+        alert("cinc");
     }
 }
 
