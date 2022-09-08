@@ -1,18 +1,8 @@
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
-var SelectCity = document.getElementById("SelectCity");
 
-
+var formemail = document.getElementById("emailAddress");
+var formphone = document.getElementById("phoneNumer");
+var cinc = document.getElementById("cinc");
+var fatherCnic = document.getElementById("fatherCnic")
 
 
 
@@ -67,13 +57,27 @@ function set_on_focus() {
 
 }
 
+const userData = {
+    userStatus: false
+
+};
 
 function btnSubmit() {
 
 
-    event.preventDefault();
-    swal("Good job!", "You clicked the button!", "success");
 
-    console.log("ok")
+
+    //  var name = document.forms["reg_form"].querySelectorAll('select', 'input')[1].value;
+    if (/^[0-9]{5}-[0-9]{7}-[0-9]$/.test(cinc)) {
+        event.preventDefault();
+        document.forms["reg_form"].querySelectorAll('select').forEach((element) => {
+            userData[element['id']] = element.value;
+        });
+        document.forms["reg_form"].querySelectorAll('input').forEach((element) => {
+            userData[element['id']] = element.value;
+        });
+        console.log(userData)
+        swal("Good job!", "You clicked the button!", "success");
+    }
 }
 // var name = document.forms["welcome_form"]["userName"].value;

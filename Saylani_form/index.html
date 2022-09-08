@@ -32,7 +32,7 @@
 
     <div  class="form_alignment">
 
-    <form onsubmit='return false'>
+    <form  name="reg_form">
 
   <div class="form-row">
 
@@ -53,7 +53,7 @@
         Looks good!
       </div>
     </div>
-<div class="col-md-6 mb-2">
+ <div class="col-md-6 mb-2">
       <label for="SelectCourse">Select course</label>
      
       <Select  type="dropdown" id="SelectCourse" onblur=check_field_valid(id)  onfocus=set_on_focus()  class="form-control form_input_height " required>
@@ -82,7 +82,7 @@
         Looks good!
       </div>
     </div>
-    <div class="col-md-6 mb-2">
+   <div class="col-md-6 mb-2">
       <label for="fatherName">Father name</label>
       <input type="text" class="form-control  form_input_height" id="fatherName" onblur=check_field_valid(id) onfocus=set_on_focus() placeholder="Father name"  required>
   
@@ -95,7 +95,7 @@
     </div>
 
 
-        <div class="col-md-6 mb-2">
+       <div class="col-md-6 mb-2">
       <label for="emailAddress">Email address</label>
       <input type="email" class="form-control  form_input_height" id="emailAddress" onblur=check_field_valid(id) onfocus=set_on_focus() placeholder="Email Address"  required>
      
