@@ -70,6 +70,7 @@ function btnSubmit() {
     //  var name = document.forms["reg_form"].querySelectorAll('select', 'input')[1].value;
     if (/^[0-9]{5}-[0-9]{7}-[0-9]$/.test(cinc)) {
         event.preventDefault();
+
         document.forms["reg_form"].querySelectorAll('select').forEach((element) => {
             userData[element['id']] = element.value;
         });
@@ -78,6 +79,7 @@ function btnSubmit() {
         });
         console.log(userData)
         swal("Good job!", "You clicked the button!", "success");
+
     }
 }
 // var name = document.forms["welcome_form"]["userName"].value;
