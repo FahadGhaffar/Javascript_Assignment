@@ -31,7 +31,7 @@ function check_field_valid(x) {
         e.classList.add('is-valid');
 
     }
-    console.log(e.value);
+
     if ((e.id === "fullName" || e.id === "fatherName" || e.id === "address" || e.id === "lastQualification") && !/(.*[a-z]){3}/i.test(e.value)) {
 
         e.classList.remove('is-valid');
@@ -68,11 +68,12 @@ function set_on_focus() {
 }
 
 
-function formSubmit() {
+function btnSubmit() {
 
 
     event.preventDefault();
     swal("Good job!", "You clicked the button!", "success");
 
-
+    console.log("ok")
 }
+// var name = document.forms["welcome_form"]["userName"].value;
