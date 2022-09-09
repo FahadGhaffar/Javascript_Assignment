@@ -26,23 +26,35 @@ function check_field_valid(x) {
 
         e.classList.remove('is-valid');
         e.classList.add("is-invalid");
+        e.dataset.checking = 'true';
 
 
+    } else {
+        e.dataset.checking = 'false';
     }
     if ((e.id === "cinc" || e.id === "fatherCnic") && !/^[0-9]{5}-[0-9]{7}-[0-9]$/.test(e.value)) {
         e.classList.remove('is-valid');
         e.classList.add("is-invalid");
+        e.dataset.checking = 'true';
 
+    } else {
+        e.dataset.checking = 'false';
     }
     if (e.id === "phoneNumer" && !/^[0-9]{4}-[0-9]{7}$/.test(e.value)) {
         e.classList.remove('is-valid');
         e.classList.add("is-invalid");
+        e.dataset.checking = 'true';
 
+    } else {
+        e.dataset.checking = 'false';
     }
 
     if (e.id === "emailAddress" && !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e.value)) {
         e.classList.remove('is-valid');
         e.classList.add("is-invalid");
+        e.dataset.checking = 'true';
+    } else {
+        e.dataset.checking = 'false';
     }
 }
 
@@ -59,7 +71,8 @@ function set_on_focus() {
 
 const userData = {
     userStatus: false,
-    message: ""
+    message: "",
+    fatherCnic: ""
 
 };
 
@@ -74,15 +87,18 @@ function btnSubmit() {
 
         document.forms["reg_form"].querySelectorAll('select, input').forEach((element) => {
 
-            userData[element['id']] = element.value;
-            if (element['myatt'] === "true") {
-                console.log("okk");
+            // if (element.classList.contains('truee')) {
+            //     console.log("okk");
+            // }
+            if (element.dataset.checking === 'true') {
+                userData[element['id']] = element.value;
+                // console.log("okk");
             }
         });
 
-        if (!fatherCnic.value && /^[0-9]{5}-[0-9]{7}-[0-9]$/.test(fatherCnic.value)) {
-            userData[fatherCnic['id']] = fatherCnic.value;
-        }
+        //// if (!fatherCnic.value && /^[0-9]{5}-[0-9]{7}-[0-9]$/.test(fatherCnic.value)) {
+        ////     userData[fatherCnic['id']] = fatherCnic.value;
+        // // }
         // document.forms["reg_form"].querySelectorAll('input').forEach((element) => {
         //     userData[element['id']] = element.value;
         // });
