@@ -157,16 +157,37 @@ function userDataLoad() {
 
       <td>${arrofuserData[i].userStatus}</td>
 
-      <td><i class="fa-solid fa-eye"></i></td>
+      <td><button type="button" class="btn btn-info" onclick=userView(${i})><i class="fa-solid fa-eye"></button></i></td>
 
       <td><button type="button" class="btn btn-primary" onclick=userFormEdit(${i})>Edit</button> </td>
 
       <td><button type="button" class="btn btn-danger"  onclick=userFormdelete(${i})>Delete</button></td>
 
     </tr> `
-        console.log(addUserData.innerHTML);
+        // console.log(addUserData.innerHTML);
 
     }
+
+    // console.log(arrofuserData[0]);
+
+}
+
+
+function userFormEdit(i) {
+
+
+
+}
+
+function userFormdelete(i) {
+
+    event.target.parentElement.parentElement.remove();
+    arrofuserData.splice(i, 1);
+    localStorage.setItem("userData", JSON.stringify(arrofuserData))
+    console.log(arrofuserData);
+    }
+function userView(i) {
+
 
     console.log(arrofuserData[0]);
 

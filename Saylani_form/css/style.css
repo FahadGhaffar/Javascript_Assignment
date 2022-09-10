@@ -161,5 +161,18 @@ select {
     
     padding: 3% 5% 0% 5%;
 }
+.userview{
 
+    border-color: #8fc44a;
+    box-shadow: 0 0 10px #8fc44a;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
