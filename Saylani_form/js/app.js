@@ -26,35 +26,36 @@ function check_field_valid(x) {
 
         e.classList.remove('is-valid');
         e.classList.add("is-invalid");
-        e.dataset.checking = 'true';
+        e.dataset.checking = 'false';
 
 
     } else {
-        e.dataset.checking = 'false';
+        e.dataset.checking = 'true';
     }
     if ((e.id === "cinc" || e.id === "fatherCnic") && !/^[0-9]{5}-[0-9]{7}-[0-9]$/.test(e.value)) {
         e.classList.remove('is-valid');
         e.classList.add("is-invalid");
-        e.dataset.checking = 'true';
+        e.dataset.checking = 'false';
 
     } else {
-        e.dataset.checking = 'false';
+        e.dataset.checking = 'true';
     }
     if (e.id === "phoneNumer" && !/^[0-9]{4}-[0-9]{7}$/.test(e.value)) {
         e.classList.remove('is-valid');
         e.classList.add("is-invalid");
-        e.dataset.checking = 'true';
+
+        e.dataset.checking = 'false';
 
     } else {
-        e.dataset.checking = 'false';
+        e.dataset.checking = 'true';
     }
 
     if (e.id === "emailAddress" && !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e.value)) {
         e.classList.remove('is-valid');
         e.classList.add("is-invalid");
-        e.dataset.checking = 'true';
-    } else {
         e.dataset.checking = 'false';
+    } else {
+        e.dataset.checking = 'true';
     }
 }
 
@@ -68,7 +69,13 @@ function set_on_focus() {
 
 
 }
+let arrofuserData;
+if (localStorage.getItem("userData") !== null) {
+    arrofuserData = JSON.parse(localStorage.getItem("userData"))
+} else {
 
+    arrofuserData = [];
+}
 const userData = {
     userStatus: false,
     message: "",
@@ -80,7 +87,7 @@ function btnSubmit() {
 
 
 
-    console.log("ok")
+    // console.log("ok")
     //  var name = document.forms["reg_form"].querySelectorAll('select', 'input')[1].value;
     if (/^[0-9]{5}-[0-9]{7}-[0-9]$/.test(cinc.value) && /^[0-9]{4}-[0-9]{7}$/.test(formphone.value) && /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(formemail.value)) {
         event.preventDefault();
@@ -90,10 +97,10 @@ function btnSubmit() {
             // if (element.classList.contains('truee')) {
             //     console.log("okk");
             // }
-            if (element.dataset.checking === 'true') {
-                userData[element['id']] = element.value;
-                // console.log("okk");
-            }
+            // if (element.dataset.checking === 'true') {
+            userData[element['id']] = element.value;
+            // console.log("okk");
+            // }
         });
 
         //// if (!fatherCnic.value && /^[0-9]{5}-[0-9]{7}-[0-9]$/.test(fatherCnic.value)) {
@@ -102,8 +109,11 @@ function btnSubmit() {
         // document.forms["reg_form"].querySelectorAll('input').forEach((element) => {
         //     userData[element['id']] = element.value;
         // });
-        console.log(userData)
+        arrofuserData.push(userData)
+        console.log(arrofuserData)
         swal("Good job!", "You clicked the button!", "success");
+
+        localStorage.setItem("userData", JSON.stringify(arrofuserData));
 
     } else {
         swal({
@@ -125,3 +135,39 @@ function btnSubmit() {
     }
 }
 // var name = document.forms["welcome_form"]["userName"].value;
+function userDataLoad() {
+    var addUserData = document.getElementById("addUserData");
+
+
+    for (let i = 0; i < arrofuserData.length; i++) {
+
+        addUserData.innerHTML += `     <tr>
+      <th scope="row">${i + 1}</th>
+      <td>${arrofuserData[i].fullName}</td>
+
+      <td>${arrofuserData[i].selectGender}</td>
+
+      <td>${arrofuserData[i].SelectCity}</td>
+
+      <td>${arrofuserData[i].SelectCourse}</td>
+
+      <td>${arrofuserData[i].emailAddress}</td>
+
+      <td>${arrofuserData[i].phoneNumer}</td>
+
+      <td>${arrofuserData[i].userStatus}</td>
+
+      <td><i class="fa-solid fa-eye"></i></td>
+
+      <td><button type="button" class="btn btn-primary" onclick=userFormEdit(${i})>Edit</button> </td>
+
+      <td><button type="button" class="btn btn-danger"  onclick=userFormdelete(${i})>Delete</button></td>
+
+    </tr> `
+        console.log(addUserData.innerHTML);
+
+    }
+
+    console.log(arrofuserData[0]);
+
+}

@@ -41,7 +41,7 @@
 
       <label for="SelectCity">Select city</label>
       
-      <Select  type="dropdown" id="SelectCity" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking="true"  class="form-control form_input_height " required>
+      <Select  type="dropdown" id="SelectCity"  onblur=check_field_valid(id) onfocus=set_on_focus() data-checking=""  class="form-control form_input_height " required>
         <option value="">Select Options</option>
         <option value="karachi">Karachi</option>
 
@@ -56,7 +56,7 @@
  <div class="col-md-6 mb-2">
       <label for="SelectCourse">Select course</label>
      
-      <Select  type="dropdown" id="SelectCourse" onblur=check_field_valid(id)  onfocus=set_on_focus() data-checking="true" class="form-control form_input_height " required>
+      <Select  type="dropdown" id="SelectCourse" onblur=check_field_valid(id)  onfocus=set_on_focus() data-checking="" class="form-control form_input_height " required>
         <option value="">Select Options</option>
         <option value="html">HTML</option>
 
@@ -73,7 +73,7 @@
 
     <div class="col-md-6 mb-2">
       <label for="fullName " class="form_lable">Full name</label>
-      <input type="text" class="form-control  form_input_height " onblur=check_field_valid(id) onfocus=set_on_focus() data-checking="true"  id="fullName" placeholder="Full name"  required>
+      <input type="text" class="form-control  form_input_height " value="Fahad " onblur=check_field_valid(id) onfocus=set_on_focus() data-checking=""  id="fullName" placeholder="Full name"  required>
 
       <div class="invalid-feedback">
         Please provide 3 letter in this field.
@@ -84,7 +84,7 @@
     </div>
    <div class="col-md-6 mb-2">
       <label for="fatherName">Father name</label>
-      <input type="text" class="form-control  form_input_height" id="fatherName" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking="true"  placeholder="Father name"  required>
+      <input type="text" class="form-control  form_input_height" value="Abdul " id="fatherName" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking=""  placeholder="Father name"  required>
   
       <div class="valid-feedback">
         Looks good!
@@ -97,7 +97,7 @@
 
        <div class="col-md-6 mb-2">
       <label for="emailAddress">Email address</label>
-      <input type="email" class="form-control  form_input_height" id="emailAddress" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking="true"  placeholder="Email Address"  required>
+      <input type="email" class="form-control  form_input_height" value="email@gmail.com" id="emailAddress" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking=""  placeholder="Email Address"  required>
      
       <div class="valid-feedback">
         Looks good!
@@ -110,7 +110,7 @@
 
        <div class="col-md-6 mb-2">
       <label for="phoneNumer">Phone number</label>
-      <input type="tel" class="form-control  form_input_height" id="phoneNumer" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking="true"  placeholder="Phone Number"  required>
+      <input type="tel" class="form-control  form_input_height" value="1234-1234567" id="phoneNumer" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking=""  placeholder="Phone Number"  required>
 
       <div class="valid-feedback">
         Looks good!
@@ -122,7 +122,7 @@
 
            <div class="col-md-6 mb-2">
       <label for="cinc">CNIC</label>
-      <input type="text" class="form-control  form_input_height" id="cinc" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking="true"  placeholder="CNIC"  required>
+      <input type="text" class="form-control  form_input_height" value="12345-1234567-1" id="cinc" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking=""  placeholder="CNIC"  required>
 
       <div class="valid-feedback">
         Looks good!
@@ -135,7 +135,7 @@
  
                <div class="col-md-6 mb-2">
       <label for="fatherCnic">Father's CNIC (optional)</label>
-      <input type="text" class="form-control  form_input_height" id="fatherCnic" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking="false"  placeholder="Father's CNIC (optional)" >
+      <input type="text" class="form-control  form_input_height" value="12345-1234567-2" id="fatherCnic" onblur=check_field_valid(id) onfocus=set_on_focus() data-checking=""  placeholder="Father's CNIC (optional)" >
     
       <div class="valid-feedback">
         Looks good!
@@ -147,7 +147,7 @@
 
                    <div class="col-md-6 mb-2">
       <label for="dateOfBirth">Date of birth</label>
-      <input type="date" class="form-control  form_input_height" id="dateOfBirth" onblur=check_field_valid(id) onfocus=set_on_focus()  data-checking="true" required>
+      <input type="date" class="form-control  form_input_height" value="09/11/2022" id="dateOfBirth" onblur=check_field_valid(id) onfocus=set_on_focus()  data-checking="" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -164,7 +164,7 @@
 
       <label for="selectGender">Select gender</label>
       
-      <Select  type="dropdown" id="selectGender" onblur=check_field_valid(id) onfocus=set_on_focus()  data-checking="true" class="form-control form_input_height truee"  required>
+      <Select  type="dropdown" id="selectGender" onblur=check_field_valid(id) onfocus=set_on_focus()  data-checking="" class="form-control form_input_height truee"  required>
         <option value="">Select Options</option>
         <option value="male">Male</option>
 
@@ -179,7 +179,7 @@
 
         <div class="col-md-12 mb-2">
       <label for="address " class="form_lable">Address</label>
-      <input type="text" class="form-control form_input_height " onblur=check_field_valid(id) onfocus=set_on_focus() id="address" placeholder="Address" data-checking="true"  required>
+      <input type="text" class="form-control form_input_height " value="test 3 address" onblur=check_field_valid(id) onfocus=set_on_focus() id="address" placeholder="Address" data-checking=""  required>
  
       <div class="invalid-feedback">
         Please provide 3 letter in this field.
@@ -192,7 +192,7 @@
 
        <div class="col-md-12 mb-2">
       <label for="lastQualification " class="form_lable">Last qualification</label>
-      <input type="text" class="form-control form_input_height " onblur=check_field_valid(id) onfocus=set_on_focus() id="lastQualification" placeholder="Last Qualification" data-checking="true"  required>
+      <input type="text" class="form-control form_input_height " value="zxczxc" onblur=check_field_valid(id) onfocus=set_on_focus() id="lastQualification" placeholder="Last Qualification" data-checking=""  required>
      
       <div class="invalid-feedback">
         Please provide 3 letter in this field.

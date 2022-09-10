@@ -151,3 +151,15 @@ select {
 .is-regex~.form_general{
     display: block;
 }
+
+
+
+
+/* Admin pannel css */
+
+.admin_alignment {
+    
+    padding: 3% 5% 0% 5%;
+}
+
+
