@@ -137,6 +137,8 @@ function btnSubmit() {
 // var name = document.forms["welcome_form"]["userName"].value;
 function userDataLoad() {
     var addUserData = document.getElementById("addUserData");
+    var userViewData = document.getElementById("userViewData");
+    var userViewCard = document.getElementById("userViewCard");
 
 
     for (let i = 0; i < arrofuserData.length; i++) {
@@ -185,10 +187,20 @@ function userFormdelete(i) {
     arrofuserData.splice(i, 1);
     localStorage.setItem("userData", JSON.stringify(arrofuserData))
     console.log(arrofuserData);
-    }
+}
 function userView(i) {
+    userViewCard.style.display = 'flex';
 
+    userViewData.innerHTML = `
+    <tr>
+    <th class='thead-light'>Name</th>
+    <td>${arrofuserData[i].fullName} </td>
+     </tr>
 
-    console.log(arrofuserData[0]);
+    
+    `
+
 
 }
+
+// just for commit
